@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Slide Effect</title>
+
+        <link rel="shortcut icon"
+            href="https://president-events.louisville.edu/oop/Icons/favicon.ico" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/OOPEvents/RSVP.css') }}">
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <style>
+
+</style>
+        <div id="headerDiv" class="headerBodyFooter">
+            <div id="headerImage">
+                <img id="bannerImg"
+                    src="https://president-events.louisville.edu/oop/images/UL_logos/UL_Logowhiteoutline.png"
+                    alt="UL">
+            </div>
+            <div id="headerText" class="mt-4">
+                <h5 id="instructions">Please RSVP by completing the
+                    form below</h5>
+            </div>
+            <!-- Header Div End -->
+        </div>
+        <div class="container" id="container">
+            <div class="form-container hide" id="mobile">
+                <h5>University of Louisville<br>VS.<br>Away Team<br>Sunday,
+                    December 31st, 2023<br>Kick-Off | 1:00 PM</h5>
+                <input class="ghost-input" name="name"
+                    value="Dylan"
+                    type="text" readonly />
+                <input class="ghost-input" name="email"
+                    value="d0domb01" type="text" readonly />
+                <input class="ghost-input" name="email"
+                    value="Game Tickets" type="text" readonly />
+                <input class="ghost-input" name="email"
+                    value="Tailgate Tickets" type="text" readonly />
+                <input class="ghost-input" name="email"
+                    value="Guest Name" type="text" readonly />
+                <img src="http://example.com/">
+            </div>
+
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h5>University of Louisville<br>VS.<br>Away Team<br>Sunday,
+                        December 31st, 2023<br>Kick-Off | 1:00 PM</h5>
+                    <input class="ghost-input" name="name"
+                        value="Dylan"
+                        type="text" readonly />
+                    <input class="ghost-input" name="email"
+                        value="d0domb01" type="text" readonly />
+                    <input class="ghost-input" name="email"
+                        value="Game Tickets" type="text" readonly />
+                    <input class="ghost-input" name="email"
+                        value="Tailgate Tickets" type="text" readonly />
+                    <input class="ghost-input" name="email"
+                        value="Guest Name" type="text" readonly />
+                    <img src="http://example.com/">
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h5>University of Louisville<br>VS.<br>Away Team<br><br>Sunday,
+                        December 31st, 2023<br><br>Kick-Off | 1:00 PM</h5><br>
+
+                    <input class="ghost-input" name="name"
+                        value="Dylan"
+                        type="text" readonly />
+                    <input class="ghost-input" name="email"
+                        value="d0domb01" type="text" readonly />
+                    <input class="ghost-input hide-me" name="email"
+                        value="Guest Name" type="text" />
+
+                    <button class="ghost hide-me" id="signUp"
+                        onClick="signup(); show()">Submit</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <p>THE PRESIDENT'S TAILGATE TENT HAS RELOCATED<br><br><br>
+                            The tent is now located in the in the NW corner
+                            of
+                            Purple Parking Lot A, directly beneath the
+                            Central
+                            Avenue overpass at the CardMarch tunnel.
+                            <br><br>
+                            Game Tickets are mobile and will be transferred
+                            to the email address provided within 48 hours
+                            prior
+                            to Kickoff.
+                            <br><br>
+                            While the tailgate will not officially begin
+                            until 2
+                            hours prior to Kickoff, the tent will be
+                            accessible
+                            for the CardMarch approximately 2 1/2 hours
+                            prior to
+                            Kickoff.
+                            <br><br><br>
+                            *Party invite and game tickets are
+                            personal & non-transferable.</p>
+                    </div>
+                    <div class="overlay-panel overlay-right"><br>
+
+                        <div class="selectContainer">
+
+                            <!-- RSVP dropdown box -->
+                            <br>
+                            <div
+                                class="form-group row align-items-center justify-content-center">
+                                <h5>Complimentary Tickets</h5>
+                                <section class="dropdown">
+                                    <select class="dropdown" name="rsvp"
+                                        id="rsvp" required>
+                                        <option value>Select</option>
+                                        <option value="0">Decline</option>
+                                        <option value="1">1</option>
+
+                                    </select>
+                                </section>
+
+                            </div>
+                            <br>
+                            <div
+                                class="form-group row align-items-center justify-content-center">
+                                <h5>Tailgate Tickets</h5>
+                                <section class="dropdown">
+                                    <select class="dropdown"
+                                        id="party" name="party" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Unable to attend">Unable
+                                            to attend</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </section>
+                            </div>
+
+                        </div>
+                        <br><br>
+                        <h5>Enter Your Name Below</h5>
+                        <input type="guestName" placeholder="Guest Name" />
+                        <br>
+                        <button class="ghost" id="signUp" onClick="signup()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divFooter" class="headerBodyFooter">
+            If you have any questions, please contact:<br>
+            Joe Elliott <br>
+            joe.elliott@louisville.edu<br>
+            502.852.5856
+            <!-- Footer Div End -->
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

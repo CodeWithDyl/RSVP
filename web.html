@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ $EventName }} RSVP</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon"
+            href="https://president-events.louisville.edu/oop/Icons/favicon.ico" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/OOPEvents/RSVP.css') }}">
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <link href="style.css" rel="stylesheet">
+        <style>
+            html {
+                background-image: url(https://president-events.louisville.edu/oop/images/football/Blackouthelmet-min.jpg);
+            }
+
+            @media only screen and (max-width 767px) {
+                body {
+                    background-image: url(https://president-events.louisville.edu/oop/images/football/blackouthelmet-mobile-min.jpg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Main Div Start -->
+        <div id="mainDiv" class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <!-- Header Div Start -->
+                    <div id="headerDiv" class="headerBodyFooter">
+                        <div id="headerImage">
+                            <img id="bannerImg"
+                                src="https://president-events.louisville.edu/oop/images/UL_logos/UL_Logowhiteoutline.png"
+                                alt="UL">
+                        </div>
+                        <div id="headerText" class="mt-4">
+                            <h5 id="instructions">Please RSVP by completing the
+                                form below</h5>
+                        </div>
+                        <!-- Header Div End -->
+                    </div>
+                    <!-- Body Div Start -->
+                    <div id="bodyDiv" class="headerBodyFooter">
+                        <form class="rounded-lg" action="<?= $formAction ?>"
+                            method="post">
+                            <input type="hidden" name="id"
+                                value="<?php echo $RecordID; ?>" />
+                            <div id="formDiv" class="infoDivs">
+                                <h5>University of Louisville<br>
+                                    vs. <br>
+                                    me
+                                    <br><br>
+                                    Sunday, December 31st, 2023
+                                    <br><br>
+                                    Kick-Off | 1:00 PM
+                                    <br><br>
+                                </h5>
+                                <input class="ghost-input" name="name"
+                                    value="Dylan"
+                                    type="text" readonly />
+                                <input class="ghost-input" name="email"
+                                    value="d0domb01" type="text" readonly />
+                                <br><br>
+                                <div class="selectContainer">
+
+                                    <!-- RSVP dropdown box -->
+
+                                    <div
+                                        class="form-group row align-items-center justify-content-center">
+                                        <label class="col-form-label">Complimentary
+                                            Tickets:</label>
+                                        <section class="col-auto">
+                                            <select name="rsvp" id="rsvp"
+                                                class="custom-select" required>
+                                                <option value>Select</option>
+                                                <option value="0">Decline</option>
+                                                <option value="1">1</option>
+
+                                            </select>
+                                        </section>
+                                    </div>
+
+                                    <div
+                                        class="form-group row align-items-center justify-content-center">
+                                        <label class="col-form-label">Tailgate
+                                            Tickets:</label>
+                                        <section class="col-auto">
+                                            <select class="custom-select"
+                                                id="party" name="party">
+                                                <option value="Select">Select</option>
+                                                <option value="Unable to attend">Unable
+                                                    to attend</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </section>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <input
+                                    class="ghost-input ghost-input-underlined"
+                                    name="Guest" placeholder="Guest Name" value
+                                    type="text" /><br>
+                                <br style="clear:both">
+                            </div>
+                            <br style="clear:both">
+                            <input id="submit" name="submit" type="submit"
+                                value="Submit" class="rounded-pill">
+                        </form>
+                        <!-- Body Div End -->
+                    </div>
+                    <!-- Footer Div Start -->
+                    <div id="divFooter" class="headerBodyFooter">
+                        If you have any questions, please contact:<br>
+                        Joe Elliott <br>
+                        joe.elliott@louisville.edu<br>
+                        502.852.5856
+                        <!-- Footer Div End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Main Div End -->
+        </div>
+    </body>
+</html>
