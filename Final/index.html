@@ -35,91 +35,84 @@
         </div>
         <div class="container" id="container">
 
-            <div class="form-container">
-                <form action="#">
-                    <h5>University of Louisville<br>VS.<br>Away Team<br><br>Sunday,
-                        December 31st, 2023<br><br>Kick-Off | 1:00 PM</h5><br>
+            <div class="form-container" id="leftSide">
+                <h5>University of Louisville<br><br>VS.<br><br>Away Team<br><br>Sunday,
+                    December 31st, 2023<br><br>Kick-Off | 1:00 PM</h5><br>
 
-                    <input class="ghost-input" name="name"
-                        value="Dylan"
-                        type="text" readonly />
-                    <input class="ghost-input" name="email"
-                        value="d0domb01" type="text" readonly />
-                    <input class="ghost-input hide-me" name="email"
-                        value="Guest Name" type="text" />
+                <input class="ghost-input" name="name"
+                    value="Dylan"
+                    type="text" readonly />
+                <input class="ghost-input" name="email"
+                    value="d0domb01" type="text" readonly />
 
-                    <button class="ghost hide-me" id="signUp"
-                        onClick="signup()">Submit</button>
-                </form>
             </div>
             <div class="overlay-container">
                 <div class="overlay">
-                    <!-- <div class="overlay-panel overlay-left">
-                        <p>THE PRESIDENT'S TAILGATE TENT HAS RELOCATED<br><br><br>
-                            The tent is now located in the in the NW corner
-                            of
-                            Purple Parking Lot A, directly beneath the
-                            Central
-                            Avenue overpass at the CardMarch tunnel.
-                            <br><br>
-                            Game Tickets are mobile and will be transferred
-                            to the email address provided within 48 hours
-                            prior
-                            to Kickoff.
-                            <br><br>
-                            While the tailgate will not officially begin
-                            until 2
-                            hours prior to Kickoff, the tent will be
-                            accessible
-                            for the CardMarch approximately 2 1/2 hours
-                            prior to
-                            Kickoff.
-                            <br><br><br>
-                            *Party invite and game tickets are
-                            personal & non-transferable.</p>
-                    </div> -->
-                    <div class="overlay-panel overlay-right"><br>
+                    <div class="overlay-panel overlay-right" id="rightSide"><br>
 
-                        <div class="selectContainer">
-
-                            <!-- RSVP dropdown box -->
-                            <br>
-                            <div
-                                class="form-group row align-items-center justify-content-center">
+                        <form>
+                            <div>
                                 <h5>Complimentary Tickets</h5>
-                                <section class="dropdown">
-                                    <select class="dropdown" name="rsvp"
-                                        id="rsvp" required>
-                                        <option value>Select</option>
-                                        <option value="0">Decline</option>
-                                        <option value="1">1</option>
+                                <!-- <select class="dropdown">
+                                    <option value>Select</option>
+                                    <option value="0">Decline</option>
+                                    <option value="1">1</option>
+                                </select> -->
+                                <div class="dropdown">
+                                    <a class="btn btn-light dropdown-toggle"
+                                        role="button"
+                                        id="dropdownMenuLink"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Dropdown link
+                                    </a>
 
-                                    </select>
-                                </section>
-
+                                    <div class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another
+                                            action</a>
+                                        <a class="dropdown-item" href="#">Something
+                                            else here</a>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div
-                                class="form-group row align-items-center justify-content-center">
+                            <br><br>
+                            <div>
                                 <h5>Tailgate Tickets</h5>
-                                <section class="dropdown">
-                                    <select class="dropdown"
-                                        id="party" name="party" required>
-                                        <option value="Select">Select</option>
-                                        <option value="Unable to attend">Unable
-                                            to attend</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </section>
-                            </div>
+                                <!-- <select class="dropdown">
+                                    <option value="Select">Select</option>
+                                    <option value="Unable to attend">Unable to
+                                        attend</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select> -->
+                                <div class="dropdown">
+                                    <a class="btn btn-light dropdown-toggle"
+                                        role="button"
+                                        id="dropdownMenuLink"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Dropdown link
+                                    </a>
 
-                        </div>
-                        <br><br>
-                        <h5>Enter Your Name Below</h5>
-                        <input type="guestName" placeholder="Guest Name" />
-                        <br>
-                        <button class="ghost" id="signUp" onClick="signup()">Submit</button>
+                                    <div class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" value="1">1</a>
+                                        <a class="dropdown-item" value="2">2</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                            <h5>Enter Your Name Below</h5>
+                            <input type="guestName" placeholder="Guest Name" />
+                            <br>
+                            <button class="ghost" id="Submit" onClick="signup()">Submit</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
